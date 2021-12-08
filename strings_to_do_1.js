@@ -49,3 +49,15 @@ arr1.forEach(function (k, i) {
 
 console.log(data);
 
+// Invert Hash - Associative arrays are also called hashes (we’ll learn why later). Build invertHash(assocArr) to convert hash keys to values, and values to keys. 
+
+function invertHash(obj){
+    var newObj = {};
+    for(var key in obj){
+        newObj[obj[key]] = key;
+    }
+    return newObj;
+}
+var obj = {"name": "Zaphod", "charm": "high", "morals": "dicey"};
+console.log(invertHash(obj));
+
